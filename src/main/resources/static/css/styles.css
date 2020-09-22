@@ -1,0 +1,41 @@
+/*h1 {*/
+/*    background-color: yellow;*/
+/*    color: red;*/
+/*}*/
+
+input {
+    margin-bottom: 15px;
+}
+
+.wbdv-nudge-15px-down {
+    position: relative;
+    top: 15px;
+}
+
+.wbdv-color-red {
+    color: red;
+}
+
+.wbdv-add-course-btn {
+    position: relative;
+    top: 15px;
+    color: red;
+}
+
+.wbdv-stuck-bottom-right {
+    position: fixed;
+    right: 15px;
+    bottom: 15px;
+}
+
+body {
+    padding-top: 100px;
+}
+
+.wbdv-sticky-header {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    background-color: lightblue;
+    right: 0px;
+}
