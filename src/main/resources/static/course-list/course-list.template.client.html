@@ -16,22 +16,24 @@
         <div class="container">
             <div class="row">
                 <div class="col-1">
-                    <i class="fas fa-bars wbdv-hamburger"></i>
+                    <i class="fas fa-bars wbdv-field wbdv-hamburger"></i>
                 </div>
                 <div class="col-3">
-                    <div class="wbdv-nudge-9px-down">
+                    <div class="wbdv-nudge-9px-down wbdv-label wbdv-course-manager">
                         Course Manager
                     </div>
                 </div>
                 <div class="col-7">
-                    <input placeholder="New Course Title" type="text" class="form-control wbdv-nudge-9px-down"/>
+                    <input placeholder="New Course Title"
+                           type="text"
+                           class="form-control wbdv-nudge-9px-down wbdv-field wbdv-new-course"/>
                 </div>
                 <div class="col-1">
-                    <i class="wbdv-color-red fas fa-2x fa-plus-circle"></i>
+                    <i class="wbdv-color-red fas fa-2x fa-plus-circle wbdv-button wbdv-add-course"></i>
                 </div>
 
 
-                <i class="wbdv-stuck-bottom-right wbdv-color-red fas fa-2x fa-plus-circle"></i>
+                <i class="wbdv-stuck-bottom-right wbdv-color-red fas fa-2x fa-plus-circle wbdv-button wbdv-add-course"></i>
             </div>
         </div>
     </h3>
@@ -40,24 +42,28 @@
         <table class="table">
             <thead>
             <tr>
-                <th>Title</th>
-                <th>Owner</th>
-                <th>Last Modified</th>
-                <th></th>
+                <th class="wbdv-header wbdv-title">Title</th>
+                <th class="wbdv-header wbdv-owner">Owner</th>
+                <th class="wbdv-header wbdv-last-modified">Last Modified</th>
+                <th class="wbdv-header wbdv-title">
+                    <i class="fas fa-grip-horizontal wbdv-button wbdv-grid-layout"></i>
+                    <i class="fas fa-sort-alpha-up wbdv-button wbdv-list-layout"></i>
+                </th>
             </tr>
             </thead>
             <tbody>
             <tr>
                 <td>
-                    <i class="fas fa-file col-xs-6"></i>
-                    <a href="../course-editor/course-editor.template.client.html">
+                    <i class="fas fa-file-alt col-xs-6 wbdv-row wbdv-icon"></i>
+                    <a href="../course-editor/course-editor.template.client.html"
+                       class="wbdv-row wbdv-title">
                         CS4550
                     </a>
                 </td>
-                <td>Jose</td>
-                <td>10:05am</td>
+                <td class="wbdv-row wbdv-owner">Jose</td>
+                <td class="wbdv-row wbdv-modified-date">10:05am</td>
                 <td>
-                    <i class="wbdv-color-red fas fa-trash float-right"></i>
+                    <i class="wbdv-color-red fas fa-trash float-right wbdv-row wbdv-button wbdv-delete"></i>
                 </td>
             </tr>
             <tr>
