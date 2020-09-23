@@ -12,6 +12,11 @@ input {
     top: 15px;
 }
 
+.wbdv-nudge-3px-up {
+    position: relative;
+    bottom: 3px;
+}
+
 .wbdv-color-red {
     color: red;
 }
@@ -28,8 +33,8 @@ input {
     bottom: 15px;
 }
 
-body {
-    padding-top: 100px;
+.wbdv-padding-top {
+    padding-top: 30px;
 }
 
 .wbdv-sticky-header {

@@ -2,139 +2,212 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Course List</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet"/>
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <link href="../css/styles.css" rel="stylesheet"/>
+    <link href="course-list.style.client.css" rel="stylesheet"/>
 
 </head>
 <body>
 <div class="container">
-    <h1 class="wbdv-sticky-header">
-        <i class="fas fa-bars"></i>
-        Course Manager
-        <input/>
-        <i class="wbdv-nudge-15px-down wbdv-color-red fas fa-2x fa-plus-circle"></i>
-        <i class="wbdv-stuck-bottom-right wbdv-color-red fas fa-2x fa-plus-circle"></i>
 
-    </h1>
+    <h3 class="wbdv-sticky-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-1">
+                    <i class="fas fa-bars wbdv-hamburger"></i>
+                </div>
+                <div class="col-3">
+                    <div class="wbdv-nudge-9px-down">
+                        Course Manager
+                    </div>
+                </div>
+                <div class="col-7">
+                    <input placeholder="New Course Title" type="text" class="form-control wbdv-nudge-9px-down"/>
+                </div>
+                <div class="col-1">
+                    <i class="wbdv-color-red fas fa-2x fa-plus-circle"></i>
+                </div>
 
-    <table class="table">
-        <thead>
-        <tr>
-            <th>Title</th>
-            <th>Owner</th>
-            <th>Last Modified</th>
-            <th></th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-            <td>
-                <i class="fas fa-file"></i>
-                <a href="../course-editor/course-editor.template.client.html">
-                    CS4550
-                </a>
-            </td>
-            <td>Jose</td>
-            <td>10:05am</td>
-            <td>
-                <i class="fas fa-spin fa-cog"></i>
-                <i class="wbdv-color-red fas fa-trash"></i>
-            </td>
-        </tr>
-        <tr>
-            <td>CS5610</td>
-            <td>Jose</td>
-            <td>10:05am</td>
-            <td><i class="wbdv-color-red fas fa-trash"></i></td>
-        </tr>
-        <tr>
-            <td>CS3200</td>
-            <td>Jose</td>
-            <td>10:05am</td>
-            <td><button>Delete</button></td>
-        </tr>
-        <tr>
-            <td>CS3200</td>
-            <td>Jose</td>
-            <td>10:05am</td>
-            <td><button>Delete</button></td>
-        </tr>
-        <tr>
-            <td>CS3200</td>
-            <td>Jose</td>
-            <td>10:05am</td>
-            <td><button>Delete</button></td>
-        </tr>
-        <tr>
-            <td>CS3200</td>
-            <td>Jose</td>
-            <td>10:05am</td>
-            <td><button>Delete</button></td>
-        </tr>
-        <tr>
-            <td>CS3200</td>
-            <td>Jose</td>
-            <td>10:05am</td>
-            <td><button>Delete</button></td>
-        </tr>
-        <tr>
-            <td>CS3200</td>
-            <td>Jose</td>
-            <td>10:05am</td>
-            <td><button>Delete</button></td>
-        </tr>
-        <tr>
-            <td>CS3200</td>
-            <td>Jose</td>
-            <td>10:05am</td>
-            <td><button>Delete</button></td>
-        </tr>
-        <tr>
-            <td>CS3200</td>
-            <td>Jose</td>
-            <td>10:05am</td>
-            <td><button>Delete</button></td>
-        </tr>
-        <tr>
-            <td>CS3200</td>
-            <td>Jose</td>
-            <td>10:05am</td>
-            <td><button>Delete</button></td>
-        </tr>
-        <tr>
-            <td>CS3200</td>
-            <td>Jose</td>
-            <td>10:05am</td>
-            <td><button>Delete</button></td>
-        </tr>
-        <tr>
-            <td>CS3200</td>
-            <td>Jose</td>
-            <td>10:05am</td>
-            <td><button>Delete</button></td>
-        </tr>
-        <tr>
-            <td>CS3200</td>
-            <td>Jose</td>
-            <td>10:05am</td>
-            <td><button>Delete</button></td>
-        </tr>
-        <tr>
-            <td>CS3200</td>
-            <td>Jose</td>
-            <td>10:05am</td>
-            <td><button>Delete</button></td>
-        </tr>
-        <tr>
-            <td>CS3200</td>
-            <td>Jose</td>
-            <td>10:05am</td>
-            <td><button>Delete</button></td>
-        </tr>
-        </tbody>
-    </table>
+
+                <i class="wbdv-stuck-bottom-right wbdv-color-red fas fa-2x fa-plus-circle"></i>
+            </div>
+        </div>
+    </h3>
+
+    <div class="wbdv-padding-top-55">
+        <table class="table">
+            <thead>
+            <tr>
+                <th>Title</th>
+                <th>Owner</th>
+                <th>Last Modified</th>
+                <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>
+                    <i class="fas fa-file col-xs-6"></i>
+                    <a href="../course-editor/course-editor.template.client.html">
+                        CS4550
+                    </a>
+                </td>
+                <td>Jose</td>
+                <td>10:05am</td>
+                <td>
+                    <i class="wbdv-color-red fas fa-trash float-right"></i>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <i class="fas fa-file col-xs-6"></i>
+                    <a href="../course-editor/course-editor.template.client.html">
+                        CS4550
+                    </a>
+                </td>
+                <td>Jose</td>
+                <td>10:05am</td>
+                <td>
+                    <i class="wbdv-color-red fas fa-trash float-right"></i>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <i class="fas fa-file col-xs-6"></i>
+                    <a href="../course-editor/course-editor.template.client.html">
+                        CS4550
+                    </a>
+                </td>
+                <td>Jose</td>
+                <td>10:05am</td>
+                <td>
+                    <i class="wbdv-color-red fas fa-trash float-right"></i>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <i class="fas fa-file col-xs-6"></i>
+                    <a href="../course-editor/course-editor.template.client.html">
+                        CS4550
+                    </a>
+                </td>
+                <td>Jose</td>
+                <td>10:05am</td>
+                <td>
+                    <i class="wbdv-color-red fas fa-trash float-right"></i>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <i class="fas fa-file col-xs-6"></i>
+                    <a href="../course-editor/course-editor.template.client.html">
+                        CS4550
+                    </a>
+                </td>
+                <td>Jose</td>
+                <td>10:05am</td>
+                <td>
+                    <i class="wbdv-color-red fas fa-trash float-right"></i>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <i class="fas fa-file col-xs-6"></i>
+                    <a href="../course-editor/course-editor.template.client.html">
+                        CS4550
+                    </a>
+                </td>
+                <td>Jose</td>
+                <td>10:05am</td>
+                <td>
+                    <i class="wbdv-color-red fas fa-trash float-right"></i>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <i class="fas fa-file col-xs-6"></i>
+                    <a href="../course-editor/course-editor.template.client.html">
+                        CS4550
+                    </a>
+                </td>
+                <td>Jose</td>
+                <td>10:05am</td>
+                <td>
+                    <i class="wbdv-color-red fas fa-trash float-right"></i>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <i class="fas fa-file col-xs-6"></i>
+                    <a href="../course-editor/course-editor.template.client.html">
+                        CS4550
+                    </a>
+                </td>
+                <td>Jose</td>
+                <td>10:05am</td>
+                <td>
+                    <i class="wbdv-color-red fas fa-trash float-right"></i>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <i class="fas fa-file col-xs-6"></i>
+                    <a href="../course-editor/course-editor.template.client.html">
+                        CS4550
+                    </a>
+                </td>
+                <td>Jose</td>
+                <td>10:05am</td>
+                <td>
+                    <i class="wbdv-color-red fas fa-trash float-right"></i>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <i class="fas fa-file col-xs-6"></i>
+                    <a href="../course-editor/course-editor.template.client.html">
+                        CS4550
+                    </a>
+                </td>
+                <td>Jose</td>
+                <td>10:05am</td>
+                <td>
+                    <i class="wbdv-color-red fas fa-trash float-right"></i>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <i class="fas fa-file col-xs-6"></i>
+                    <a href="../course-editor/course-editor.template.client.html">
+                        CS4550
+                    </a>
+                </td>
+                <td>Jose</td>
+                <td>10:05am</td>
+                <td>
+                    <i class="wbdv-color-red fas fa-trash float-right"></i>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <i class="fas fa-file col-xs-6"></i>
+                    <a href="../course-editor/course-editor.template.client.html">
+                        CS4550
+                    </a>
+                </td>
+                <td>Jose</td>
+                <td>10:05am</td>
+                <td>
+                    <i class="wbdv-color-red fas fa-trash float-right"></i>
+                </td>
+            </tr>
+
+            </tbody>
+        </table>
+    </div>
+
 </div>
 </body>
 </html>

@@ -1,0 +1,22 @@
+.wbdv-padding-top-55{
+    padding-top: 55px;
+}
+
+.wbdv-hamburger{
+    position: absolute;
+    right: 0px;
+    top: 14px;
+}
+
+.wbdv-nudge-9px-down{
+    position: absolute;
+    top: 9px;
+}
+
+body {
+    background: lightgray;
+}
+
+table {
+    background: white;
+}
