@@ -20,10 +20,12 @@ const createUser = () => {
   const username = $("#usernameFld").val()
   const first = $("#firstNameFld").val()
   const last = $("#lastNameFld").val()
+  const role = $("#roleFld").val()
   const newUser = {
     username,
     first,
-    last
+    last,
+    role
   }
   userService.createUser(newUser)
     .then(actualInsertedUser => {
@@ -33,22 +35,30 @@ const createUser = () => {
 }
 
 const updateUser = () => {
-  const updatedFields = {
-    username: $("#usernameFld").val(),
-    first: $("#firstNameFld").val()
+  if (selectedUserIndex != -1) {
+    const updatedFields = {
+      username: $("#usernameFld").val(),
+      first: $("#firstNameFld").val(),
+      last: $("#lastNameFld").val(),
+      role: $("#roleFld").val()
+    }
+    const userId = users[selectedUserIndex]._id
+    userService.updateUser(userId, updatedFields)
+      .then(status => {
+        users[selectedUserIndex] = updatedFields
+        renderUsers(users)
+      })
   }
-  const userId = users[selectedUserIndex]._id
-  userService.updateUser(userId, updatedFields)
-    .then(status => {
-      users[selectedUserIndex] = updatedFields
-      renderUsers(users)
-    })
 }
 
 let selectedUserIndex = -1
 const selectUser = (index) => {
   selectedUserIndex = index
-  $("#usernameFld").val(users[index].username)
+  const user = users[index]
+  $("#usernameFld").val(user.username)
+  $("#firstNameFld").val(user.first)
+  $("#lastNameFld").val(user.last)
+  $("#roleFld").val(user.role)
 }
 
 let $template
