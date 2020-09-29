@@ -1,40 +1,11 @@
 (function () {
-let users = [
-  {
-    username: "alice",
-    fName: "Alice",
-    lName: "Wonderland",
-    role: "STUDENT"
-  },
-  {
-    username: "bob",
-    fName: "Bob",
-    lName: "Marley",
-    role: "STUDENT"
-  },
-  {
-    username: "charlie",
-    fName: "Charlie",
-    lName: "Garcia",
-    role: "FACULTY"
-  }
-]
+let users = []
 
 const onclickEventHandler = () => {
   alert("heading clicked")
 }
 
-const deleteUser = (event) => {
-  const deleteBtn = event.currentTarget
-  const $deleteBtn = $(deleteBtn)
-  // const parent = $deleteBtn.parent().parent().parent()
-  const parent = $deleteBtn.parents("tr")
-  console.log(parent)
-  parent.remove()
-  // alert("delete user")
-}
-
-const deleteUser2 = (index) => {
+const deleteUser = (index) => {
   const user = users[index]
   const userId = user._id
   userService.deleteUser(userId)
@@ -74,7 +45,7 @@ function renderUsers(users) {
     const $lastName = $clone.find(".wbdv-last-name")
     $lastName.html(lName)
     const $removeBtn = $clone.find(".wbdv-remove")
-    $removeBtn.click(() => deleteUser2(i))
+    $removeBtn.click(() => deleteUser(i))
     $clone
       .find(".wbdv-select")
       .click(() => selectUser(i))
@@ -113,14 +84,6 @@ const updateUser = () => {
 }
 
 function init() {
-  const heading1 = jQuery("h1")
-  // heading1.remove()
-  heading1
-    .css("backgroundColor", "blue")
-    .html("User Administration")
-    .append(" - for Administrators Only")
-    .click(onclickEventHandler)
-
   $template = jQuery(".wbdv-template")
   tbody = $("tbody.wbdv-tbody")
   $(".wbdv-create").click(createUser)
