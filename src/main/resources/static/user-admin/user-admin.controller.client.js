@@ -1,16 +1,11 @@
 (function () {
 let users = []
 
-const onclickEventHandler = () => {
-  alert("heading clicked")
-}
-
 const deleteUser = (index) => {
   const user = users[index]
   const userId = user._id
   userService.deleteUser(userId)
     .then(status => {
-      console.log(status)
       users.splice(index, 1)
       renderUsers(users)
     })
@@ -61,46 +56,53 @@ const selectUser = (index) => {
   $("#roleFld").val(user.role)
 }
 
+
+
 let $template
 let tbody
 
-function renderUsers(users) {
+const renderUsers = (users) => {
   tbody.empty()
   for(let i=0; i<users.length; i++) {
-    const $clone = $template.clone()
-
-    $clone.removeClass("wbdv-hidden")
-
-    const user = users[i]
-    $clone.find(".wbdv-username").html(user.username)
-    $clone.find(".wbdv-first-name").html(user.first)
-    $clone.find(".wbdv-last-name").html(user.last)
-    $clone.find(".wbdv-role").html(user.role)
-
-    const $removeBtn = $clone.find(".wbdv-remove")
-    $removeBtn.click(() => deleteUser(i))
-    $clone
-      .find(".wbdv-select")
-      .click(() => selectUser(i))
-
-    tbody.append($clone)
+    renderUser(users[i], i)
   }
 }
 
-function init() {
-  $template = jQuery(".wbdv-template")
-  tbody = $("tbody.wbdv-tbody")
-  $(".wbdv-create").click(createUser)
-  $(".wbdv-update").click(updateUser)
+const renderUser = (user, i) => {
+  const $clone = $template.clone()
+  $clone.removeClass("wbdv-hidden")
 
+  $clone.find(".wbdv-username").html(user.username)
+  $clone.find(".wbdv-first-name").html(user.first)
+  $clone.find(".wbdv-last-name").html(user.last)
+  $clone.find(".wbdv-role").html(user.role)
+
+  $clone
+    .find(".wbdv-remove")
+    .click(() => deleteUser(i))
+  $clone
+    .find(".wbdv-select")
+    .click(() => selectUser(i))
+
+  tbody.append($clone)
+}
+
+const findAllUsers = () => {
   userService.findAllUsers()
     .then(_users => {
-      console.log(_users)
       users = _users
       renderUsers(users)
     })
 }
 
-jQuery(init)
+const main = () => {
+  $template = jQuery(".wbdv-template")
+  tbody = $("tbody.wbdv-tbody")
+  $(".wbdv-create").click(createUser)
+  $(".wbdv-update").click(updateUser)
 
+  findAllUsers()
+}
+
+$(main)
 })()
